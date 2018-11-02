@@ -1,0 +1,40 @@
+//-------------------
+//Daniel Sulcina-----
+//-------------------
+//--31.10.2018-------
+
+import java.util.*;
+import java.util.List;
+
+public class project1 {
+    public static void main(String[]arguments){
+        //-----------------
+        Scanner scanner = new Scanner(System.in);
+        //-----------------
+        System.out.println("Introduceti un numar");
+        System.out.println("Tastati: ");
+        //-----------------
+        String string=scanner.nextLine();
+        //---------------
+        int getnumber=0,sum=0;
+        //---------------
+        List<Integer>list = new ArrayList<Integer>();
+        //---------------
+        for(String i:string.split("")){
+            list.add(Integer.parseInt(i));
+            getnumber++;
+        }
+        //---------------
+        int[]integers=new int[list.size()];
+        //---------------
+        for(int i=0;i<integers.length;i++){
+            integers[i]=list.get(i);
+            sum+=list.get(i);
+        }
+        //---------------
+        System.out.println("\nNumarul elementelor introduse este: "+getnumber);
+        System.out.println("Numere adaugate: "+list);
+        System.out.println("Suma acestora este: "+sum);
+        //---------------
+    }
+}
