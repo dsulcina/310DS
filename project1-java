@@ -1,44 +1,62 @@
-//-------------------
-//Daniel Sulcina-----
-//-------------------
-//--31.10.2018-------
-//------------Cerinta
-//--Sa se scrie un program, 
-//care citeste un numar natural N, 
-//si afiseaza suma tuturor cifrelor.---
+/*
+Update: 11.02.2018
+-------------------
+Daniel Sulcina-----
+-------------------
+--31.10.2018-------
+------------Cerinta
+--Sa se scrie un program, 
+care citeste un numar natural N, 
+si afiseaza suma tuturor cifrelor.---
+*/
 
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class project1 {
+public class ouble {
     public static void main(String[]arguments){
-        //-----------------
-        Scanner scanner = new Scanner(System.in);
-        //-----------------
+        Scanner scanner=new Scanner(System.in);
+        int total=0,add=0;
+
         System.out.println("Introduceti un numar");
         System.out.println("Tastati: ");
-        //-----------------
         String string=scanner.nextLine();
-        //---------------
-        int getnumber=0,sum=0;
-        //---------------
-        List<Integer>list = new ArrayList<Integer>();
-        //---------------
+
+        List<Integer>stringArray=new ArrayList<>();
         for(String i:string.split("")){
-            list.add(Integer.parseInt(i));
-            getnumber++;
+            stringArray.add(Integer.parseInt(i));
+            total++;
         }
-        //---------------
-        int[]integers=new int[list.size()];
-        //---------------
-        for(int i=0;i<integers.length;i++){
-            integers[i]=list.get(i);
-            sum+=list.get(i);
+        int[]intArray=new int[stringArray.size()];
+        for(int i=0;i<intArray.length;i++){
+            intArray[i]=stringArray.get(i);
+            add+=stringArray.get(i);
         }
-        //---------------
-        System.out.println("\nNumarul elementelor introduse este: "+getnumber);
-        System.out.println("Numere adaugate: "+list);
-        System.out.println("Suma acestora este: "+sum);
-        //---------------
+        int max=intArray[0];
+        for(int i=0;i<intArray.length;i++){
+            if(intArray[i]>max){
+                max=intArray[i];
+            }
+        }
+        System.out.println("Numarul introdus este: "+string);
+        System.out.println("Numerele din multime sunt: "+stringArray);
+        System.out.println("Totalul numerelor din multime: "+total);
+        System.out.println("Suma acestora este: "+add);
+        System.out.println("Cel mai mare numar introdus este: "+max);
     }
 }
+
+*/
+Output
+______
+Introduceti un numar
+Tastati: 1233984
+
+Numarul introdus este: 1233984
+Numerele din multime sunt: [1, 2, 3, 3, 9, 8, 4]
+Totalul numerelor din multime: 7
+Suma acestora este: 30
+Cel mai mare numar introdus este: 9
+______
+*/
