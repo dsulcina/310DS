@@ -2,6 +2,10 @@
 //Daniel Sulcina-----
 //-------------------
 //--31.10.2018-------
+//------------Cerinta
+//--Sa se scrie un program, 
+//care citeste un numar natural N, 
+//si afiseaza suma tuturor cifrelor.---
 
 import java.util.*;
 import java.util.List;
